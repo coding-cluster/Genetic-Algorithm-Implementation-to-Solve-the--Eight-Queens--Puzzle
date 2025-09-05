@@ -1,13 +1,15 @@
+# << Imports >>
 import random
-import numpy as np
+from numpy import array
 
+# << Individual's Class >>
 class Individual:
     def __init__(self, chromosome=None):
         # Chromosome is a list of 8 integers (rows 0..7) for each column
-        self.chromosome = np.array(chromosome) if chromosome is not None else []
+        self.chromosome = array(chromosome) if chromosome is not None else []
         self.fitness = None
     
-    def randomChromosomeGeneration(self, size: int = 8) -> np.array:
+    def randomChromosomeGeneration(self, size: int = 8) -> array:
         """
         Generate a random chromosome of given size and store in self.chromosome.
 
@@ -46,6 +48,8 @@ class Individual:
         
         self.fitness = global_max - conflicts
         return self.fitness
+    
+    
     
     # Returns a string with the chromosome itself, and its fitness
     def __repr__(self) -> str:
