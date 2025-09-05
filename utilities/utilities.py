@@ -10,11 +10,11 @@ def logo():
     
     for el in logo_el:
         print(el)
-        time.sleep(0.15)  # Pausa de 250 ms
+        time.sleep(0.1)  # Pausa de 100 ms
     
     for i in range(1, 34):
         print('-', end='')
-        time.sleep(0.03)  # Pausa de 150 ms
+        time.sleep(0.02)  # Pausa de 20 ms
     print()
 
 def clear_screen():
