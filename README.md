@@ -8,7 +8,7 @@
             <p>
                 <strong>Author:</strong> Alexis Alberto Zúñiga Alonso<br/>
                 <strong>Instagram:</strong> <a href="https://instagram.com/thisisalexza" target="_blank">@thisisalexza</a><br/>
-                <strong>GitHub:</strong> <a href="https://github.com/codingcluster" target="_blank">@codingcluster</a>
+                <strong>GitHub:</strong> <a href="https://github.com/coding-cluster" target="_blank">@coding-cluster</a>
             </p>
         </td>
     </tr>
