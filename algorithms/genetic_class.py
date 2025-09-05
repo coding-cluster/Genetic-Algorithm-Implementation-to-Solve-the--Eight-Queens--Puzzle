@@ -7,7 +7,7 @@ class Individual:
         self.chromosome = np.array(chromosome) if chromosome is not None else []
         self.fitness = None
     
-    def randomChromosomeGeneration(self, size: int = 8):
+    def randomChromosomeGeneration(self, size: int = 8) -> np.array:
         """
         Generate a random chromosome of given size and store in self.chromosome.
 
@@ -16,7 +16,7 @@ class Individual:
         self.chromosome = [random.randint(0, size - 1) for _ in range(size)]
         return self.chromosome
     
-    def calculate_fitness(self, global_max):
+    def calculate_fitness(self, global_max) -> int:
         """
         Compute fitness as the negative number of conflicting queen pairs.
 

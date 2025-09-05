@@ -13,6 +13,7 @@
 
 import utilities as ut
 from algorithms import Individual
+from numpy import array
 
 GLOBAL_MAX = 28
 
@@ -20,7 +21,7 @@ def main():
     # Program start
     ut.logo()
 
-    individual = Individual([])
+    individual = Individual(array([]))
     individual.randomChromosomeGeneration()
     fitness = individual.calculate_fitness(GLOBAL_MAX)
     print(f"Generated: {individual.chromosome} | Fitness: {fitness}")
