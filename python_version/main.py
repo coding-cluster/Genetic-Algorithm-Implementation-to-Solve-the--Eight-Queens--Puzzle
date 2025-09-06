@@ -29,15 +29,6 @@ def main():
     # Instance creation from class
     individual = Individual([])
     
-    '''
-    # << Genetic Algorithm Methods >>
-    individual.random_chromosome_generation()
-    fitness = individual.calculate_fitness(GLOBAL_MAX)
-    
-    # Show the generated chromosome and its fitness
-    print(f"Generated: {individual.chromosome} | Fitness: {fitness}")
-    '''
-    
     population = individual.create_population(POPULATION, BOARD_SIZE)
     # Print first 3 individuals as a preview
     preview = ", ".join(str(ind) for ind in population[:3])

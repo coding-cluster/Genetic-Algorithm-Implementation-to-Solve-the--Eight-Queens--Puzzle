@@ -47,43 +47,6 @@ class Individual:
         
         self.fitness = global_max - conflicts
         return self.fitness
-
-    def create_population(self, population_size: int, size: int):
-        """
-        Create a list-based population of Individuals with random chromosomes.
-
-        - population_size: number of individuals to create
-        - size: board size (N for N-Queens)
-
-        Returns a list[Individual] and also stores it in self.population.
-        """
-        self.population = []
-        
-        # Gaussian formula to calculate max pairs
-        max_pairs = (size * (size - 1)) / 2
-        for i in range(population_size):
-            ind = Individual()
-            
-            ind.random_chromosome_generation()
-            ind.calculate_fitness(max_pairs)
-            self.population.append(ind)
-        
-        return self.population
-    
-    def pmx_algorithm(self, population: int, size: int):
-        """
-        Partially Mapped Crossover Algorithm:
-        Mutation and crossover are applied to generate new offspring. We randomly
-        select two crossover points to exchange portions of data. 
-        
-        Steps:
-        1. Selection of Crossover Points
-        2. Copy the middle segment
-        3. Determine Mapping Relationship to Legalise Offspring
-        4. Legalise offprings with the mapping relationship
-        """
-        pop = self.population
-        
     
     # Returns a string with the chromosome itself, and its fitness
     def __repr__(self) -> str:
