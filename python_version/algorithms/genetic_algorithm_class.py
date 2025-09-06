@@ -5,11 +5,11 @@ from algorithms.individual_class import Individual
 class GeneticAlgorithm():
     def __init__(self, population):
         self.population = list(population) if population is not None else []
-    
+
     def generate_population(self, population_size: int, size: int):
         """
         Create a list-based population of Individuals with random chromosomes.
-
+    
         - population_size: number of individuals to create
         - size: board size (N for N-Queens)
 
@@ -26,7 +26,7 @@ class GeneticAlgorithm():
             self.population.append(ind)
         
         return self.population
-    
+
     def pmx_crossover(self, population: list, population_size: int,
                             size: int):
-        pass
+        print(self.population)

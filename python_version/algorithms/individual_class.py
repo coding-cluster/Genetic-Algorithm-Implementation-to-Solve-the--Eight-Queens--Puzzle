@@ -9,8 +9,6 @@ class Individual:
         """Chromosome is a list of N integers (rows 0..N-1) for each column."""
         self.chromosome = list(chromosome) if chromosome is not None else []
         self.fitness = None
-        # Optional: generated population storage when using create_population
-        self.population = []
     
     def random_chromosome_generation(self, size: int):
         """Generate a random chromosome of given size and store in self.chromosome.
@@ -28,7 +26,7 @@ class Individual:
         """
         chrom = self.chromosome  # Chromosome reference
         n = len(chrom)  # Length of the chromosome
-        conflicts = 0  # Conflict counter to calculate fitness
+        conflicts = 0
         
         # Check if the chromosome is empty
         if chrom is None or n == 0:

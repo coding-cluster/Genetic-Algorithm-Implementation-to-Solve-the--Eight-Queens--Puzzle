@@ -13,7 +13,8 @@
 
 # << Imports >>
 import utilities as ut
-from algorithms import Individual
+from algorithms.genetic_algorithm_class import Individual
+from algorithms.individual_class import GeneticAlgorithm
 
 # << Global constants >>
 GLOBAL_MAX = 28
@@ -26,13 +27,7 @@ def main():
     # << Program Start >>
     ut.logo()
 
-    # Instance creation from class
-    individual = Individual([])
     
-    population = individual.create_population(POPULATION, BOARD_SIZE)
-    # Print first 3 individuals as a preview
-    preview = ", ".join(str(ind) for ind in population[:3])
-    print(f"Population size: {len(population)} | Preview: {preview}")
 
 # << Program execution >>
 if __name__ == "__main__":
